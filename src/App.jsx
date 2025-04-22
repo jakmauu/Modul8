@@ -1,6 +1,6 @@
 import React from 'react';
 import './App.css';
-import logo from './assets/LOGO.svg';
+import logo from './assets/Logo.svg';
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import { AnimatePresence } from 'framer-motion';
 
