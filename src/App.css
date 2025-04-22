@@ -1,0 +1,155 @@
+:root {
+  --bg-color: #ffffff; /* Warna latar belakang */
+  --text-color: #000000; /* Warna teks */
+  --box-bg-color: #f9f9f9; /* Warna kotak */
+  --box-border-color: #a19f9f; /* Warna border kotak */
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+
+body {
+  background-color: var(--bg-color); /* Warna latar belakang */
+  color: var(--text-color); /* Warna teks */
+  margin: 0;
+  padding: 0;
+  overflow: hidden; /* Mencegah scroll vertikal dan horizontal */
+  font-family: 'Poppins', sans-serif; /* Pastikan font tetap sesuai */
+  min-height: 100vh; /* Pastikan body memenuhi tinggi layar */
+  display: flex;
+  flex-direction: column;
+}
+
+#root {
+  background-color: var(--bg-color); /* Warna latar belakang */
+  color: var(--text-color); /* Warna teks */
+  max-width: 100vw; /* Pastikan elemen root tidak melebihi lebar viewport */
+  overflow-x: hidden; /* Mencegah scroll horizontal */
+  margin: 0 auto;
+  min-height: 100vh; /* Pastikan root memenuhi tinggi layar */
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+  text-align: center;
+}
+
+.logo {
+  height: 6em;
+  width: auto;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #0c0c0daa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+/* Warna teks untuk tautan navigasi */
+.nav-link {
+  color: var(--text-color); /* Gunakan variabel warna */
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+  color: #e7e9eb; /* Warna hover tetap terlihat */
+}
+
+header {
+  position: fixed; /* Membuat header tetap di atas */
+  top: 0; /* Posisi dari atas layar */
+  left: 0; /* Posisi dari kiri layar */
+  width: 100%; /* Memastikan header memenuhi lebar layar */
+  z-index: 1000; /* Memberikan prioritas agar header berada di atas elemen lain */
+  background-color: var(--bg-color); /* Warna latar belakang */
+  color: var(--text-color); /* Warna teks */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Tambahkan bayangan */
+  transition: background-color 0.3s ease, color 0.3s ease; /* Animasi transisi */
+  height: 4rem; /* Tinggi header */
+}
+
+/* Warna teks untuk header */
+header h1 {
+  color: var(--text-color); /* Gunakan variabel warna untuk teks */
+}
+
+
+
+main {
+  flex: 1; /* Isi ruang yang tersisa antara header dan footer */
+  display: flex;
+  justify-content: flex-start; /* Posisikan konten lebih ke atas */
+  align-items: center; /* Posisikan konten di tengah secara horizontal */
+  text-align: center;
+  padding-top: 2rem; /* Tambahkan jarak dari header */
+}
+
+.praktikum-container {
+  display: flex; /* Gunakan flexbox untuk tata letak */
+  justify-content: center; /* Posisikan elemen di tengah secara horizontal */
+  align-items: center; /* Pastikan elemen sejajar di bagian atas */
+  gap: 1.5rem; /* Tambahkan jarak antar elemen */
+  flex-wrap: wrap; /* Jika layar kecil, elemen akan membungkus ke baris berikutnya */
+  width: 100%; /* Pastikan container memenuhi lebar layar */
+}
+
+/* Warna teks di dalam kotak praktikum */
+.praktikum-box {
+  display: flex;
+  flex-direction: column; /* Atur elemen dalam satu kolom */
+  align-items: center; /* Posisikan elemen di tengah */
+  justify-content: center; /* Posisikan elemen di tengah */
+  padding: 1rem; /* Tambahkan padding */
+  border-radius: 8px; /* Tambahkan border radius */
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.1); /* Tambahkan bayangan */
+  border: 2px solid var(--box-border-color); /* Warna border */
+  width: 150px; /* Lebar kotak */
+  text-align: center; /* Teks di tengah */
+  transition: transform 0.3s ease; /* Animasi saat hover */
+  background-color: var(--box-bg-color); /* Warna latar belakang kotak */
+  color: var(--text-color); /* Warna teks */
+}
+
+.praktikum-box:hover {
+  transform: scale(1.05); /* Perbesar sedikit saat hover */
+  border-color: #434242; /* Ubah warna border saat hover */
+  box-shadow: 0 12px 16px rgba(0, 0, 0, 0.3); /* Tambahkan bayangan lebih tebal saat hover */
+}
+
+.praktikum-text {
+  margin-top: 0.5rem; /* Jarak antara logo dan teks */
+  font-size: 0.9rem; /* Ukuran teks */
+  font-weight: bold; /* Teks tebal */
+  color: var(--text-color); /* Warna teks */
+}
+
+.text-center {
+  margin-top: 10rem; /* Tambahkan jarak ke bawah */
+}
+
+/* Warna teks di dalam text-box */
+.text-box {
+  border: 2px solid var(--box-border-color); /* Gunakan variabel warna */
+  border-radius: 8px; /* Membuat sudut border melengkung */
+  padding: 1rem; /* Memberikan jarak di dalam kotak */
+  max-width: 600px; /* Lebar maksimum kotak */
+  background-color: var(--box-bg-color); /* Gunakan variabel warna */
+  color: var(--text-color); /* Gunakan variabel warna untuk teks */
+  text-align: left; /* Teks rata kiri */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Tambahkan bayangan */
+}
+
+/* Warna tombol */
+button {
+  background-color: var(--box-bg-color); /* Warna tombol */
+  color: var(--text-color); /* Warna teks tombol */
+  border: 1px solid var(--box-border-color); /* Warna border tombol */
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+button:hover {
+  background-color: var(--box-border-color); /* Warna saat hover */
+  color: #ffffff; /* Kontras dengan warna latar */
+}
